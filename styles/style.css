@@ -9,6 +9,9 @@ body {
     font-size: 1.5vw;
     font-weight: normal;
 }
+* {
+    box-sizing: border-box;
+}
 .wrapper {
     
 }
@@ -20,7 +23,8 @@ body {
 
 .header {
     padding-top: 2em;
-    height: 100vh;
+    height: 30em;
+    max-height: 100vh;
     overflow: hidden;
     background-image: url("../images/main-bg.jpg");
     background-repeat: no-repeat;
@@ -34,6 +38,41 @@ body {
 }
 .header-logo {
 
+}
+.header-nav-mobile {
+    display: none;
+    margin-left: auto;
+}
+.header-nav-mobile .nav-icon {
+    font-size: 2em;
+}
+.header-nav-mobile input[type=checkbox] {
+    display: none;
+}
+.header-nav-mobile input[type=checkbox]:checked + ul {
+    right: 0;
+}
+.header-nav-mobile ul {
+    list-style: none;
+    position: absolute;
+    right: -100%;
+    width: 45%;
+    min-width: 15em;
+    margin: 0;
+    padding: 0;
+    transition: right 0.3s;
+    background-color: #fff;
+}
+.header-nav-mobile ul li {
+    
+}
+.header-nav-mobile ul li a {
+    display: block;
+    padding: 0.5em 0;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    color: #333;
 }
 .header-nav {
     flex: 100;
@@ -92,7 +131,7 @@ body {
     list-style: none;
 }
 .list-dishes li figure {
-    margin: 0;
+    margin: 0 2em;
 }
 .list-dishes li figure a {
     position: relative;
@@ -116,6 +155,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+}
+.list-dishes li figure a img {
+    width: 100%;
 }
 .list-dishes li h3 {
     margin: 1em 0 0.5em;
@@ -176,6 +218,7 @@ body {
 .section-chicken-grill-content p {
     margin: 1em 0;
     line-height: 1.3;
+    text-shadow: 0 0 0.1em #000;
     color: #fff;
 }
 .section-oriental-taste-content .btn,
@@ -325,7 +368,7 @@ body {
 }
 .footer-col h5 {
     margin: 0 0 1em;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 .footer-col p {
     line-height: 1.3;
@@ -351,4 +394,67 @@ body {
 }
 .footer-col ul li a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    .header {
+        background-position: -8em top;
+    }
+    .header-nav,
+    .header-search {
+        display: none;
+    }
+    .header-nav-mobile {
+        display: block;
+    }
+
+    .header-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .header-content h1,
+    .header-content p {
+        text-shadow: 0 0 0.1em #000;
+    }
+
+    .section-oriental-taste {
+        padding-top: 2em;
+    }
+    .section-chicken-grill {
+        padding-bottom: 2em;
+        margin-bottom: 4em;
+    }
+
+    .section-oriental-taste-inner,
+    .section-chicken-grill-inner {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    .section-chicken-grill-inner {
+        flex-direction: column-reverse;
+    }
+    .section-oriental-taste-pic,
+    .section-chicken-grill-pic {
+        text-align: center;
+    }
+
+    .statistic-item {
+        font-size: 1.5em;
+    }
+    
+    .footer-cols {
+        flex-direction: column;
+    }
+    .footer-col {
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+    .footer-col.double-col {
+        margin-right: 0;
+    }
 }

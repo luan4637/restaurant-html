@@ -72,5 +72,18 @@
     text-decoration: none;
 }
 .socials li a i {
-    font-size: 1.5em;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+    .section-list {
+        flex-direction: column;
+    }
+    .section-list > li {
+        display: block;
+        margin: 3em 0 0 0;
+    }
+    .section-list > li:first-child {
+        margin-top: 0;
+    }
 }

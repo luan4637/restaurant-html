@@ -86,4 +86,7 @@
     .section-list > li:first-child {
         margin-top: 0;
     }
+    .section-intro {
+        width: auto;
+    }
 }

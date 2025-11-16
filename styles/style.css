@@ -13,7 +13,7 @@ body {
     box-sizing: border-box;
 }
 .wrapper {
-    
+    position: relative;
 }
 .container {
     margin: 0 auto;
@@ -22,15 +22,10 @@ body {
 }
 
 .header {
-    padding-top: 2em;
-    height: 30em;
-    max-height: 100vh;
-    overflow: hidden;
-    background-image: url("../images/main-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    color: #fff;
+    position: absolute;
+    top: 2em;
+    right: 0;
+    left: 0;
 }
 .header-inner {
     display: flex;
@@ -145,23 +140,34 @@ body {
     color: #333;
 }
 
-.header-content {
+/** top content **/
+.section-top-content {
+    height: 32em;
+    max-height: 100vh;
+    overflow: hidden;
+    background-image: url("../images/main-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    color: #fff;
+}
+.section-top-content-intro {
     margin-top: 5em;
     margin-left: 28em;
     margin-right: 7em;
 }
-.header-content h1 {
+.section-top-content-intro h1 {
     margin: 0 0 0.7em 0;
     font-size: 3em;
     font-family: "Bodoni Moda", sans-serif;
     line-height: 1.2;
     color: #ffc200;
 }
-.header-content p {
+.section-top-content-intro p {
     margin: 2em 0;
     line-height: 1.5;
 }
-.header-content a {
+.section-top-content-intro a {
     font-weight: 500;
 }
 
@@ -456,12 +462,12 @@ body {
         display: block;
     }
 
-    .header-content {
+    .section-top-content-intro {
         margin-left: 0;
         margin-right: 0;
     }
-    .header-content h1,
-    .header-content p {
+    .section-top-content-intro h1,
+    .section-top-content-intro p {
         text-shadow: 0 0 0.1em #000;
     }
 
